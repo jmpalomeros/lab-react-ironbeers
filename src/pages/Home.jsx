@@ -21,7 +21,7 @@ function Home() {
 
     <div>
       <img src={imgRandom} alt="random" />
-      <h3><Link to="/random-beer">Random Beer </Link></h3>
+      <h3><Link to="/beers/random-beer">Random Beer </Link></h3>
       <p>¡Ruleta Rusa! Seguro que aciertas</p>
     </div>
 

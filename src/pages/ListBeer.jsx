@@ -37,13 +37,10 @@ function ListBeer() {
   //4. clausula de guardia
 
   if (isLoading === true){
-    return <h3>...loading</h3>
+    return <h3>Loading.Take it easy, baby</h3>
   }
 
-  //exporto el array a app.js mediante la función que recibe el props
-  // console.log("la lista a pasar por proprs", list)
-  // props.getList(list)
-
+ 
   //5. renderizar data
 
   return (
@@ -60,7 +57,7 @@ function ListBeer() {
     {list.map((eachBeer)=>{
       return (<div key={eachBeer._id}>
       <img src={eachBeer.image_url} alt="beer" width={"50px"}/>
-      <h5>Name: <Link to={`/${eachBeer._id}`}>{eachBeer.name}</Link></h5>
+      <h5>Name: <Link to={`/beers/${eachBeer._id}`}>{eachBeer.name}</Link></h5>
       <p>Tagline: {eachBeer.tagline}</p>
       <p>Contributed by: {eachBeer.contributed_by.split("<", 1)}</p>
        
